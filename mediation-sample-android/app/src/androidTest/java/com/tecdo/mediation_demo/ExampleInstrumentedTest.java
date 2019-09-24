@@ -1,4 +1,4 @@
-package com.kcheng.myapplication;
+package com.tecdo.mediation_demo;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.kcheng.myapplication", appContext.getPackageName());
+        assertEquals("com.tecdo.mediation_demo", appContext.getPackageName());
     }
 }

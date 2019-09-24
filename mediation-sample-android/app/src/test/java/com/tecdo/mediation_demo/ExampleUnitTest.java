@@ -1,4 +1,4 @@
-package com.kcheng.myapplication;
+package com.tecdo.mediation_demo;
 
 import org.junit.Test;
 
