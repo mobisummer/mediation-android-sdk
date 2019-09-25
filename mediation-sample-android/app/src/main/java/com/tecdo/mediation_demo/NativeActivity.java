@@ -82,6 +82,5 @@ public class NativeActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-
     }
 }
