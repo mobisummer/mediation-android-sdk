@@ -251,7 +251,9 @@ implementation 'com.tecdo.android:medition:1.0.0'
         mAd.preload();
 ```
 1、原生广告素材将在onNativeAdAssetsLoaded返回。
+
 2、title、description将一定会返回其余信息可能为空，需要判断再进行相应的布局。
+
 3、NativeAd需要通过registerViewForInteraction()方法绑定相关视图，内部会处理视图的点击跳转事件以及MediaView的加载和IconView的加载。
 
 
