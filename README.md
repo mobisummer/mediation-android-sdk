@@ -205,7 +205,8 @@ implementation 'com.tecdo.android:medition:1.0.0'
     
 ```
 
-1.每一次show之前都需要先进行preload()，在收到onAdLoaded回调之后调用show()方法就可以
+1.每一次show之前都需要先进行preload()，在收到onAdLoaded回调之后调用show()方法就可以。
+
 2.如果视频全部播放完可获得奖励。将在onAdComplete进行回调。
 
 ### NativeAd
