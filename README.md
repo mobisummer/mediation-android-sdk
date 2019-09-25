@@ -46,9 +46,9 @@ implementation 'com.tecdo.android:medition:1.0.0'
 
 目前提供的广告类型有
 - 横幅广告 [BannerAd](#BannerAd)
-- 插屏广告 [Ad](#Ad)
-- 奖励广告 [Ad](#Ad)
-- 原生广告 [NativeAd](#Ad)
+- 插屏广告 [Ad](#Ad-插屏广告)
+- 奖励广告 [Ad](#Ad-奖励广告)
+- 原生广告 [NativeAd](#NativeAd)
 
 ### BannerAd
 
@@ -208,11 +208,8 @@ implementation 'com.tecdo.android:medition:1.0.0'
 1.每一次show之前都需要先进行preload()，在收到onAdLoaded回调之后调用show()方法就可以
 2.如果视频全部播放完可获得奖励。将在onAdComplete进行回调。
 
-### CreativeViewDelegate
+### NativeAd
 
-用于满足多入口和自定义控件或是其他宽高比例的入口的需求。需要自定义 View。
-
-1. 在自定义View中的构造函数初始化`CreativeViewDelegate`
 
 ```java
         mTitleView = findViewById(R.id.textView_title);
