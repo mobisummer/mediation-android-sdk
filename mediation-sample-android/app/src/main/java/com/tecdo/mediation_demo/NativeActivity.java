@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -11,10 +12,11 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.tdmediation.android.INativeAdListener;
 import com.tdmediation.android.NativeAd;
-import com.tdmediation.android.NativeAdAssets;
-import com.tdmediation.android.NativeAdMediaView;
+
+import com.tecdo.mediation_common.INativeAdListener;
+import com.tecdo.mediation_common.NativeAdAssets;
+import com.tecdo.mediation_common.NativeAdMediaView;
 
 
 import java.util.HashMap;
@@ -41,19 +43,21 @@ public class NativeActivity extends AppCompatActivity {
 
         final LinearLayout layout = findViewById(R.id.layout_super);
 
-        mAd = new NativeAd(this,"1e57c30b-af10-4cb3-8674-b6f19c157027");
-
+        mAd = new NativeAd(this,"2a459126-afed-4feb-8bc7-3d321b01ad2b");
         mAd.setNativeAdListener(new INativeAdListener() {
             @Override
             public void onNativeAdAssetsLoaded(NativeAdAssets adAssets) {
                 mTitleView.setText(adAssets.getTitle());
                 mDescView.setText(adAssets.getDescription());
                 btn.setText(adAssets.getCallToAction());
+                if (adAssets.getIcon() == null){
+                    ViewGroup parent = (ViewGroup)mIconView.getParent();
+                    parent.removeView(mIconView);
+                }
                 Map<String,View> views = new HashMap<>();
-                views.put(NativeAd.KEY_NATIVE_VIEW_DESC,mDescView);
-                views.put(NativeAd.KEY_NATIVE_VIEW_TITLE,mTitleView);
-                views.put(NativeAd.KEY_NATIVE_VIEW_CALL_TO_ACTION,btn);
-
+                views.put(NativeAdAssets.KEY_NATIVE_VIEW_DESC,mDescView);
+                views.put(NativeAdAssets.KEY_NATIVE_VIEW_TITLE,mTitleView);
+                views.put(NativeAdAssets.KEY_NATIVE_VIEW_CALL_TO_ACTION,btn);
                 mAd.registerViewForInteraction(layout,mMediaView,mIconView,views);
                 btn.setVisibility(adAssets.getCallToAction()!=null?View.VISIBLE:View.GONE);
                 Log.d("NativeAd","onNativeAdAssetsLoaded");

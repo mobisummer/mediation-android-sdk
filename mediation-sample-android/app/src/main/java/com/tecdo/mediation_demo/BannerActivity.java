@@ -8,10 +8,10 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.tdmediation.android.AdSize;
 import com.tdmediation.android.BannerAd;
-import com.tdmediation.android.IAdListener;
 
+import com.tecdo.mediation_common.AdSize;
+import com.tecdo.mediation_common.IAdListener;
 
 
 public class BannerActivity extends AppCompatActivity {
@@ -21,14 +21,16 @@ public class BannerActivity extends AppCompatActivity {
   @Override
   protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+
     setContentView(R.layout.activity_td_banner_show);
     if (getSupportActionBar() != null) {
-      getSupportActionBar().setTitle("TDBannerView");
+
+      getSupportActionBar().setTitle("BannerAd");
     }
     mBannerAd = findViewById(R.id.v_banner);
     mBannerAd.setADSize(AdSize.BANNER);
-    mBannerAd.setPid("69898a73-35f7-430c-b2f1-c616d44407ec");
-    mBannerAd.preload();
+//    mBannerAd.setPid("fc18d70b-df89-4d20-96a8-51e070bdcbd4");
+    mBannerAd.setPid("9b9cfb99-0779-4420-8be4-75d8d65319b0");
     mBannerAd.setAdListener(new IAdListener() {
       @Override
       public void onAdLoaded() {
@@ -54,7 +56,13 @@ public class BannerActivity extends AppCompatActivity {
       public void onAdClose() {
         Log.d("BannerActivity","onAdClose");
       }
+
+      @Override
+      public void onAdComplete() {
+        Log.d("BannerActivity","onAdComplete");
+      }
     });
+    mBannerAd.preload();
   }
 
   @Override

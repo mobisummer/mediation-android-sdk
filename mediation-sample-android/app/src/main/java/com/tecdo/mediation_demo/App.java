@@ -20,11 +20,15 @@ public class App extends Application {
   @Override
   public void onCreate() {
     super.onCreate();
+
+
     MediationConfig config = new MediationConfig();
-    config.appId = "8eb19e1c-678a-4c3d-a60e-7ac406ffbd3e";
+//    config.appId = "mediation_demo";
+    config.appId = "2cc0add8-ccb0-48b3-91af-c4feb8d9b253";
     config.appContext = this;
     config.isDebugMode = true;
-    AdSetting.setTestDevice("17807a5a-9c2e-4d99-9c1d-5c63830e1848");
+    AdSetting.addTestDevice("0a183b5a-e657-447b-b341-b1448f5af0e7",AdSetting.AD_SDK_PLATFORM_FACEBOOK);
+//    AdSetting.setGaTestDevice("B017F5D3A7AC576372DAF1060D4FE4C4");
     Mediation.init(config, new IMediationListener() {
       @Override
       public void initialSuccess() {

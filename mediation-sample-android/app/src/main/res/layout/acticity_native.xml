@@ -15,7 +15,7 @@ android:paddingRight="10dp">
     android:paddingBottom="10dp"
     android:paddingTop="10dp">
 
-    <com.tdmediation.android.NativeAdMediaView
+    <com.tecdo.mediation_common.NativeAdMediaView
         android:id="@+id/iconView"
         android:layout_width="35dp"
         android:layout_height="35dp" />
@@ -56,7 +56,7 @@ android:paddingRight="10dp">
 
 </LinearLayout>
 
-<com.tdmediation.android.NativeAdMediaView
+<com.tecdo.mediation_common.NativeAdMediaView
     android:id="@+id/mediaView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
