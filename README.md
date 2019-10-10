@@ -3,6 +3,12 @@
 ## 1. SDK 引入
 
 ### `Gradle` 依赖
+1. 在项目的Gradle下面增加Maven路径：
+```groovy
+maven {
+            url "https://dl.bintray.com/mobisummer/msmaven"
+        }
+```
 1. 在**App**的 `build.gradle` 文件中加入
 
 ```groovy
