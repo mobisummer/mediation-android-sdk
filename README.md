@@ -8,6 +8,8 @@
 ```groovy
 dependencies {
 implementation 'com.tecdo.android:medition:1.0.0'
+implementation 'com.tecdo.android:medition_facebook:1.0.0'
+implementation 'com.tecdo.android:medition_google:1.0.0'
 }
 ```
 
