@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    interstitialAd = new Ad(this,"8f43f46a-d409-4cc5-86fe-7678992a438f");
+    interstitialAd = new Ad(this,"2fab6d7c-67e5-4649-8ab7-366d39e7b6c3");
     interstitialAd.setAdListener(new IAdListener() {
       @Override
       public void onAdLoaded() {
@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
       findViewById(R.id.btn_interstitial_load).setOnClickListener(new OnClickListener() {
           @Override
           public void onClick(View v) {
+            interstitialAd.destroy();
               interstitialAd.preload();
           }
       });
@@ -71,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
           }
       });
 
-    rewardVideoAd = new Ad(this,"0c699734-05bf-4445-813a-4c018767e80f");
+    rewardVideoAd = new Ad(this,"9d19d8d5-5555-4d71-b83c-106df16cf62f");
     rewardVideoAd.setAdListener(new IAdListener() {
       @Override
       public void onAdLoaded() {
@@ -106,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
     findViewById(R.id.btn_video_load).setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View v) {
+        rewardVideoAd.destroy();
         rewardVideoAd.preload();
       }
     });

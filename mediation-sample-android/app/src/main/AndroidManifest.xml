@@ -17,7 +17,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-9969021491078593~4811988185"/>
+            android:value="ca-app-pub-9969021491078593~6413562045"/>
 
         <activity android:name="com.tecdo.mediation_demo.NativeActivity" />
         <activity android:name="com.tecdo.mediation_demo.BannerActivity" />

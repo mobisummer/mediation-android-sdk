@@ -23,11 +23,11 @@ public class App extends Application {
 
 
     MediationConfig config = new MediationConfig();
-//    config.appId = "mediation_demo";
-    config.appId = "2cc0add8-ccb0-48b3-91af-c4feb8d9b253";
+    config.appId = "mediation_demo";
     config.appContext = this;
     config.isDebugMode = true;
-    AdSetting.addTestDevice("0a183b5a-e657-447b-b341-b1448f5af0e7",AdSetting.AD_SDK_PLATFORM_FACEBOOK);
+//    AdSetting.addTestDevice("1E2FB1EC9AF4599C8816321C0BE7F829",AdSetting.AD_SDK_PLATFORM_GOOGLE);
+        AdSetting.addTestDevice("da968250-3f3e-4ecb-9964-121533c1c539",AdSetting.AD_SDK_PLATFORM_FACEBOOK);
 //    AdSetting.setGaTestDevice("B017F5D3A7AC576372DAF1060D4FE4C4");
     Mediation.init(config, new IMediationListener() {
       @Override

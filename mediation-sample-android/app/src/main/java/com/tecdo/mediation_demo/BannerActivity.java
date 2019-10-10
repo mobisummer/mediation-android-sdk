@@ -30,7 +30,7 @@ public class BannerActivity extends AppCompatActivity {
     mBannerAd = findViewById(R.id.v_banner);
     mBannerAd.setADSize(AdSize.BANNER);
 //    mBannerAd.setPid("fc18d70b-df89-4d20-96a8-51e070bdcbd4");
-    mBannerAd.setPid("9b9cfb99-0779-4420-8be4-75d8d65319b0");
+    mBannerAd.setPid("e068545a-c05f-46fc-9d6f-dd13b7d69a7b");
     mBannerAd.setAdListener(new IAdListener() {
       @Override
       public void onAdLoaded() {

@@ -13,7 +13,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
     defaultConfig {
-        applicationId "com.tecdo.mediation_demo"
+        applicationId "com.tecdo.mediation"
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
@@ -33,8 +33,10 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.tecdo.android:mediation:1.0.18'
+    implementation 'com.tecdo.android:mediation:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'com.tecdo.android:mediation_google:1.0.0'
+    implementation 'com.tecdo.android:mediation_facebook:1.0.0'
+
 }

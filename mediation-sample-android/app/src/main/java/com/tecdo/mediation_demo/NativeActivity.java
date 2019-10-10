@@ -43,7 +43,7 @@ public class NativeActivity extends AppCompatActivity {
 
         final LinearLayout layout = findViewById(R.id.layout_super);
 
-        mAd = new NativeAd(this,"2a459126-afed-4feb-8bc7-3d321b01ad2b");
+        mAd = new NativeAd(this,"f7189c0e-48d1-4815-837f-8e5770441a17");
         mAd.setNativeAdListener(new INativeAdListener() {
             @Override
             public void onNativeAdAssetsLoaded(NativeAdAssets adAssets) {
