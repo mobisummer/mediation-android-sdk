@@ -31,6 +31,7 @@ implementation 'com.tecdo.android:medition_google:1.0.0'
 ```java
 
     MediationConfig config = new MediationConfig();
+    // testAppId = "mediation_demo"
     config.appId = "YOUR APPID";
     config.appContext = this;
     config.isDebugMode = true;
@@ -84,7 +85,7 @@ implementation 'com.tecdo.android:medition_google:1.0.0'
 
     mBannerAd = findViewById(R.id.v_banner);
     mBannerAd.setADSize(AdSize.BANNER);
-    mBannerAd.setPid("69898a73-35f7-430c-b2f1-c616d44407ec");
+    mBannerAd.setPid("e068545a-c05f-46fc-9d6f-dd13b7d69a7b");
     mBannerAd.setAdListener(new IAdListener() {
       @Override
       public void onAdLoaded() {
@@ -118,7 +119,7 @@ implementation 'com.tecdo.android:medition_google:1.0.0'
 ### Ad-插屏广告
 
 ```java
-    interstitialAd = new Ad(this,"cb2a4933-3345-40f9-b6a5-54369a5a3a40");
+    interstitialAd = new Ad(this,"2fab6d7c-67e5-4649-8ab7-366d39e7b6c3");
     interstitialAd.setAdListener(new IAdListener() {
       @Override
       public void onAdLoaded() {
@@ -165,7 +166,7 @@ implementation 'com.tecdo.android:medition_google:1.0.0'
 ### Ad-奖励广告
 
 ```java
-    rewardVideoAd = new Ad(this,"5fecf474-376d-4612-837d-78325b94a62f");
+    rewardVideoAd = new Ad(this,"9d19d8d5-5555-4d71-b83c-106df16cf62f");
     rewardVideoAd.setAdListener(new IAdListener() {
       @Override
       public void onAdLoaded() {
@@ -229,7 +230,7 @@ implementation 'com.tecdo.android:medition_google:1.0.0'
 
         final LinearLayout layout = findViewById(R.id.layout_super);
 
-        mAd = new NativeAd(this,"1e57c30b-af10-4cb3-8674-b6f19c157027");
+        mAd = new NativeAd(this,"f7189c0e-48d1-4815-837f-8e5770441a17");
         mAd.setNativeAdListener(new INativeAdListener() {
             @Override
             public void onNativeAdAssetsLoaded(NativeAdAssets adAssets) {
@@ -237,9 +238,9 @@ implementation 'com.tecdo.android:medition_google:1.0.0'
                 mDescView.setText(adAssets.getDescription());
                 btn.setText(adAssets.getCallToAction());
                 Map<String,View> views = new HashMap<>();
-                views.put(NativeAd.KEY_NATIVE_VIEW_DESC,mDescView);
-                views.put(NativeAd.KEY_NATIVE_VIEW_TITLE,mTitleView);
-                views.put(NativeAd.KEY_NATIVE_VIEW_CALL_TO_ACTION,btn);
+                views.put(NativeAdAssets.KEY_NATIVE_VIEW_DESC,mDescView);
+                views.put(NativeAdAssets.KEY_NATIVE_VIEW_TITLE,mTitleView);
+                views.put(NativeAdAssets.KEY_NATIVE_VIEW_CALL_TO_ACTION,btn);
 
                 mAd.registerViewForInteraction(layout,mMediaView,mIconView,views);
                 btn.setVisibility(adAssets.getCallToAction()!=null?View.VISIBLE:View.GONE);
