@@ -25,9 +25,6 @@ implementation 'com.tecdo.android:mediation_google:1.0.0'
 
 ## 2. 初始化
 
-我们提供了两种初始化方式，自动初始化和手动初始化。
-> *推荐使用自动初始化，尽早地初始化可以加快商城打开的速度，提升用户体验，提高转化率。*
-
 ```java
 
     MediationConfig config = new MediationConfig();
