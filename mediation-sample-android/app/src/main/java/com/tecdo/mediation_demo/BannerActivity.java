@@ -62,7 +62,7 @@ public class BannerActivity extends AppCompatActivity {
         Log.d("BannerActivity","onAdComplete");
       }
     });
-    mBannerAd.preload();
+    mBannerAd.preload(this);
   }
 
   @Override

@@ -13,9 +13,10 @@ maven {
 
 ```groovy
 dependencies {
-implementation 'com.tecdo.android:mediation:1.0.0'
-implementation 'com.tecdo.android:mediation_facebook:1.0.0'
-implementation 'com.tecdo.android:mediation_google:1.0.0'
+implementation 'com.tecdo.android:mediation:1.0.1'
+implementation 'com.tecdo.android:mediation_google:1.0.1'
+implementation 'com.tecdo.android:mediation_facebook:1.0.1'
+implementation 'com.tecdo.android:mediation_tcash:1.0.0'
 }
 ```
 
@@ -109,7 +110,7 @@ implementation 'com.tecdo.android:mediation_google:1.0.0'
         Log.d("BannerActivity","onAdClose");
       }
     });
-    mBannerAd.preload();
+    mBannerAd.preload(this);
 ```
 
 
