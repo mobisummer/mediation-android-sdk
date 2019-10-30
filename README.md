@@ -91,6 +91,16 @@ dependencies {
 }
 ```
 
+1.8 App的Build.gradle中加上
+
+```groovy
+android {
+       sourceCompatibility JavaVersion.VERSION_1_7
+       targetCompatibility JavaVersion.VERSION_1_8
+}
+```
+
+
 > [版本更新内容及行为变更](docs/update.md)
 
 
