@@ -29,7 +29,7 @@ implementation 'com.tecdo.android:mediation_google:1.0.3.0'
 
 <meta-data
         android:name="com.google.android.gms.ads.APPLICATION_ID"
-        android:value="我们提供给你们的ID"/>
+        android:value="联系商务获取"/>
 ```
 
 1.3 mediation-tcash（option）
