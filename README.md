@@ -50,9 +50,15 @@ implementation 'com.tecdo.android:mediation_tdshop:1.0.3.0'
 ```
 
 1.5 mediation_mopub（option）
-
+##在项目Build.gradle中加上
 ```groovy
 
+repositories {
+        maven { url "https://s3.amazonaws.com/moat-sdk-builds" }
+}
+```
+
+```groovy   
 dependencies {
 implementation 'com.tecdo.android:mediation_mopub:1.0.3.0'
 }
