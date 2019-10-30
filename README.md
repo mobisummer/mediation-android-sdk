@@ -3,20 +3,91 @@
 ## 1. SDK 引入
 
 ### `Gradle` 依赖
-1. 在项目的Gradle下面增加Maven路径：
+
+1.1. 在项目的Gradle下面增加Maven路径：
+
 ```groovy
 maven {
             url "https://dl.bintray.com/mobisummer/msmaven"
         }
 ```
-1. 在**App**的 `build.gradle` 文件中加入
+1.2 在**App**的 `build.gradle` 文件中加入
 
 ```groovy
 dependencies {
-implementation 'com.tecdo.android:mediation:1.0.1'
-implementation 'com.tecdo.android:mediation_google:1.0.1'
-implementation 'com.tecdo.android:mediation_facebook:1.0.1'
-implementation 'com.tecdo.android:mediation_tcash:1.0.0'
+implementation 'com.tecdo.android:mediation:1.0.3.0'
+}
+```
+
+1.3 mediation-google（option）
+
+1.3.1 App的Build.gradle中加上
+
+```groovy
+dependencies {
+implementation 'com.tecdo.android:mediation_google:1.0.3.0'
+}
+```
+
+1.3.2 在AndroidMaifest.xml加上
+
+App的Build.gradle中加上
+
+```groovy
+<meta-data
+        android:name="com.google.android.gms.ads.APPLICATION_ID"
+        android:value="联系商务获取"/>
+```
+
+1.4 mediation-tcash（option）
+
+App的Build.gradle中加上
+
+```groovy
+
+dependencies {
+implementation 'com.tecdo.android:mediation_tcash:1.0.3.0'
+}
+```
+1.5 mediation_tdshop（option）
+
+```groovy
+
+dependencies {
+implementation 'com.tecdo.android:mediation_tdshop:1.0.3.0'
+}
+```
+
+1.6 mediation_mopub（option）
+
+1.6.1 在项目Build.gradle中加上
+```groovy
+
+repositories {
+        maven { url "https://s3.amazonaws.com/moat-sdk-builds" }
+}
+```
+1.6.1 App的Build.gradle中加上
+```groovy   
+dependencies {
+implementation 'com.tecdo.android:mediation_mopub:1.0.3.0'
+}
+```
+
+1.7 mediation_ironsource（option）
+
+1.7.1 在项目Build.gradle中加上
+```groovy
+
+repositories {
+        maven { url "https://dl.bintray.com/ironsource-mobile/android-sdk" }
+}
+```
+1.7.2 App的Build.gradle中加上
+
+```groovy
+dependencies {
+       implementation 'com.tecdo.android:mediation_ironsource:1.0.3.0'
 }
 ```
 
