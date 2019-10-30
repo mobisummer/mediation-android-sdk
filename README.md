@@ -21,7 +21,7 @@ implementation 'com.tecdo.android:mediation:1.0.3.0'
 
 1.3 mediation-google（option）
 
-App的Build.gradle中加上
+1.3.1 App的Build.gradle中加上
 
 ```groovy
 dependencies {
