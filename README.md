@@ -13,10 +13,57 @@ maven {
 
 ```groovy
 dependencies {
-implementation 'com.tecdo.android:mediation:1.0.1'
-implementation 'com.tecdo.android:mediation_google:1.0.1'
-implementation 'com.tecdo.android:mediation_facebook:1.0.1'
-implementation 'com.tecdo.android:mediation_tcash:1.0.0'
+implementation 'com.tecdo.android:mediation:1.0.3.0'
+}
+```
+
+1.1 mediation-google（option）
+
+```groovy
+
+dependencies {
+implementation 'com.tecdo.android:mediation_google:1.0.3.0'
+}
+
+在AndroidMaifest.xml加上
+
+<meta-data
+        android:name="com.google.android.gms.ads.APPLICATION_ID"
+        android:value="我们提供给你们的ID"/>
+```
+
+1.3 mediation-tcash（option）
+
+```groovy
+
+dependencies {
+implementation 'com.tecdo.android:mediation_tcash:1.0.3.0'
+}
+```
+1.4 mediation_tdshop（option）
+
+```groovy
+
+dependencies {
+implementation 'com.tecdo.android:mediation_tdshop:1.0.3.0'
+}
+```
+
+1.5 mediation_mopub（option）
+
+```groovy
+
+dependencies {
+implementation 'com.tecdo.android:mediation_mopub:1.0.3.0'
+}
+```
+
+1.6 mediation_ironsource（option）
+
+```groovy
+
+dependencies {
+implementation 'com.tecdo.android:mediation_ironsource:1.0.3.0'
 }
 ```
 
