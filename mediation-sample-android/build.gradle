@@ -19,6 +19,8 @@ allprojects {
         maven {
             url "https://dl.bintray.com/mobisummer/msmaven"
         }
+        maven { url "https://dl.bintray.com/ironsource-mobile/android-sdk" }
+        maven { url "https://s3.amazonaws.com/moat-sdk-builds" }
     }
 }
 
