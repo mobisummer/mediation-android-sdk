@@ -1,7 +1,10 @@
 package com.tecdo.mediation_demo;
 
 import android.app.Application;
+import android.content.Context;
 import android.util.Log;
+
+import androidx.multidex.MultiDex;
 
 import com.tdmediation.android.AdSetting;
 import com.tdmediation.android.IMediationListener;
@@ -37,5 +40,11 @@ public class App extends Application {
         Log.d("App","Mediation initialFailure:"+msg);
       }
     });
+
+  }
+  @Override
+  protected void attachBaseContext(Context base) {
+    super.attachBaseContext(base);
+    MultiDex.install(this);
   }
 }
