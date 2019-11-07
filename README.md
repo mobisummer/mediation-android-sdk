@@ -4,18 +4,25 @@
 
 ### `Gradle` 依赖
 
-1.1. 在项目的Gradle下面增加Maven路径：
+1.1 在项目的Gradle下面增加Maven路径：
 
 ```groovy
 maven {
             url "https://dl.bintray.com/mobisummer/msmaven"
         }
 ```
-1.2 在**App**的 `build.gradle` 文件中加入
+在**App**的 `build.gradle` 文件中加入
 
 ```groovy
 dependencies {
 implementation 'com.tecdo.android:mediation:1.0.3.0'
+}
+```
+1.2 mediation-facebook（option）
+
+```groovy
+dependencies {
+implementation 'com.tecdo.android:mediation_facebook:1.0.3.0'
 }
 ```
 
@@ -95,8 +102,10 @@ dependencies {
 
 ```groovy
 android {
-       sourceCompatibility JavaVersion.VERSION_1_7
-       targetCompatibility JavaVersion.VERSION_1_8
+       compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 ```
 
