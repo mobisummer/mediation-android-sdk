@@ -15,14 +15,14 @@ maven {
 
 ```groovy
 dependencies {
-implementation 'com.tecdo.android:mediation:1.0.3.0'
+implementation 'com.tecdo.android:mediation:1.0.4.0'
 }
 ```
 1.2 mediation-facebook（option）
 
 ```groovy
 dependencies {
-implementation 'com.tecdo.android:mediation_facebook:1.0.3.0'
+implementation 'com.tecdo.android:mediation_facebook:1.0.4.0'
 }
 ```
 
@@ -32,13 +32,11 @@ implementation 'com.tecdo.android:mediation_facebook:1.0.3.0'
 
 ```groovy
 dependencies {
-implementation 'com.tecdo.android:mediation_google:1.0.3.0'
+implementation 'com.tecdo.android:mediation_google:1.0.4.0'
 }
 ```
 
 1.3.2 在AndroidMaifest.xml加上
-
-App的Build.gradle中加上
 
 ```groovy
 <meta-data
@@ -53,7 +51,7 @@ App的Build.gradle中加上
 ```groovy
 
 dependencies {
-implementation 'com.tecdo.android:mediation_tcash:1.0.3.0'
+implementation 'com.tecdo.android:mediation_tcash:1.0.4.0'
 }
 ```
 1.5 mediation_tdshop（option）
@@ -61,7 +59,7 @@ implementation 'com.tecdo.android:mediation_tcash:1.0.3.0'
 ```groovy
 
 dependencies {
-implementation 'com.tecdo.android:mediation_tdshop:1.0.3.0'
+implementation 'com.tecdo.android:mediation_tdshop:1.0.4.0'
 }
 ```
 
@@ -77,7 +75,7 @@ repositories {
 1.6.1 App的Build.gradle中加上
 ```groovy   
 dependencies {
-implementation 'com.tecdo.android:mediation_mopub:1.0.3.0'
+implementation 'com.tecdo.android:mediation_mopub:1.0.4.0'
 }
 ```
 
@@ -94,11 +92,53 @@ repositories {
 
 ```groovy
 dependencies {
-       implementation 'com.tecdo.android:mediation_ironsource:1.0.3.0'
+       implementation 'com.tecdo.android:mediation_ironsource:1.0.4.0'
 }
 ```
 
-1.8 App的Build.gradle中加上
+1.8 mediation_inmobi（option）
+
+```groovy
+dependencies {
+       implementation 'com.tecdo.android:mediation_inmobi:1.0.4.0'
+}
+```
+
+1.9 mediation_mintegral（option）
+
+```groovy
+dependencies {
+       implementation 'com.tecdo.android:mediation_mintegral:1.0.4.0'
+}
+```
+
+1.10 mediation_adcolony（option）
+
+```groovy
+dependencies {
+       implementation 'com.tecdo.android:mediation_adcolony:1.0.4.0'
+}
+```
+
+1.11 mediation_applovin（option）
+
+1.11.1 在App的Build.gradle加上
+
+```groovy
+dependencies {
+       implementation 'com.tecdo.android:mediation_applovin:1.0.4.0'
+}
+```
+
+1.11.2 在AndroidMaifest.xml加上
+
+```groovy
+
+<meta-data android:name="applovin.sdk.key"
+        android:value="联系商务获取" />
+```
+
+1.12 App的Build.gradle中加上
 
 ```groovy
 android {
@@ -118,19 +158,17 @@ android {
 
 ```java
 
-    MediationConfig config = new MediationConfig();
-    // testAppId = "mediation_demo"
-    config.appId = "YOUR APPID";
-    config.appContext = this;
+    MediationConfig config = new MediationConfig(this,"mediation_demo");
     config.isDebugMode = true;
     Mediation.init(config, new IMediationListener() {
       @Override
       public void initialSuccess() {
-        Log.d("App","Mediation initialSuccess");
+        Log.d("App","initialSuccess");
       }
+
       @Override
       public void initialFailure(int code, String msg) {
-        Log.d("App","Mediation initialFailure:"+msg);
+        Log.d("App","initialFailure:"+msg);
       }
     });
     
