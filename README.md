@@ -108,12 +108,18 @@ dependencies {
 
 1.9 mediation_mintegral（option）
 
-在**App**的 `build.gradle` 加上
+1.9.1 在**App**的 `build.gradle` 加上
 
 ```groovy
 dependencies {
        implementation 'com.tecdo.android:mediation_mintegral:1.0.4.0'
 }
+```
+
+1.9.2 在**App**的 `Maifest.xml` 加上
+
+```groovy
+<uses-library android:name="org.apache.http.legacy" android:required="false"/>
 ```
 
 1.10 mediation_adcolony（option）
