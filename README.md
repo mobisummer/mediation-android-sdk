@@ -72,7 +72,7 @@ repositories {
         maven { url "https://s3.amazonaws.com/moat-sdk-builds" }
 }
 ```
-1.6.1 App的Build.gradle中加上
+1.6.1 在**App**的 `build.gradle` 加上
 ```groovy   
 dependencies {
 implementation 'com.tecdo.android:mediation_mopub:1.0.4.0'
