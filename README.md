@@ -28,7 +28,7 @@ implementation 'com.tecdo.android:mediation_facebook:1.0.4.0'
 
 1.3 mediation-google（option）
 
-1.3.1 App的Build.gradle中加上
+1.3.1 在**App**的 `build.gradle` 文件中加入
 
 ```groovy
 dependencies {
@@ -36,7 +36,7 @@ implementation 'com.tecdo.android:mediation_google:1.0.4.0'
 }
 ```
 
-1.3.2 在AndroidMaifest.xml加上
+1.3.2 在**App**的 `Maifest.xml` 加上
 
 ```groovy
 <meta-data
@@ -46,7 +46,7 @@ implementation 'com.tecdo.android:mediation_google:1.0.4.0'
 
 1.4 mediation-tcash（option）
 
-App的Build.gradle中加上
+在**App**的 `build.gradle` 加上
 
 ```groovy
 
@@ -65,7 +65,7 @@ implementation 'com.tecdo.android:mediation_tdshop:1.0.4.0'
 
 1.6 mediation_mopub（option）
 
-1.6.1 在项目Build.gradle中加上
+1.6.1 在**项目**的 `build.gradle` 加上
 ```groovy
 
 repositories {
@@ -81,14 +81,14 @@ implementation 'com.tecdo.android:mediation_mopub:1.0.4.0'
 
 1.7 mediation_ironsource（option）
 
-1.7.1 在项目Build.gradle中加上
+1.7.1 在**项目**的 `build.gradle`加上
 ```groovy
 
 repositories {
         maven { url "https://dl.bintray.com/ironsource-mobile/android-sdk" }
 }
 ```
-1.7.2 App的Build.gradle中加上
+1.7.2 在**App**的 `build.gradle` 加上
 
 ```groovy
 dependencies {
@@ -98,6 +98,8 @@ dependencies {
 
 1.8 mediation_inmobi（option）
 
+在**App**的 `build.gradle` 加上
+
 ```groovy
 dependencies {
        implementation 'com.tecdo.android:mediation_inmobi:1.0.4.0'
@@ -105,6 +107,8 @@ dependencies {
 ```
 
 1.9 mediation_mintegral（option）
+
+在**App**的 `build.gradle` 加上
 
 ```groovy
 dependencies {
@@ -114,6 +118,8 @@ dependencies {
 
 1.10 mediation_adcolony（option）
 
+在**App**的 `build.gradle` 加上
+
 ```groovy
 dependencies {
        implementation 'com.tecdo.android:mediation_adcolony:1.0.4.0'
@@ -122,7 +128,7 @@ dependencies {
 
 1.11 mediation_applovin（option）
 
-1.11.1 在App的Build.gradle加上
+1.11.1 在**App**的 `build.gradle` 加上
 
 ```groovy
 dependencies {
@@ -130,7 +136,7 @@ dependencies {
 }
 ```
 
-1.11.2 在AndroidMaifest.xml加上
+1.11.2 在**App**的 `Maifest.xml` 加上
 
 ```groovy
 
@@ -138,7 +144,7 @@ dependencies {
         android:value="联系商务获取" />
 ```
 
-1.12 App的Build.gradle中加上
+1.12 在**App**的 `build.gradle` 加上
 
 ```groovy
 android {
